@@ -1,0 +1,36 @@
+---
+---
+
+<p>
+	{% for link in site.data.links %}{% for item in link %}<a href="{{ item[1] }}" target="_blank" class="btn">{{ item[0] }}</a>&nbsp;{% endfor %}{% endfor %}
+</p>
+
+<p>&nbsp;</p>
+
+<h2>로그다...</h2>
+<ul>
+{% for page in site.pages %}
+	{% if page.url contains 'log' %}
+	<li>{{ page.dir }} - <a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endfor %}
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>같이 놀려면...</h2>
+<ul>
+{% for link in site.data.links %}
+	<li>{% for item in link %}{{ item[0] }}: <a href="{{ item[1] }}" target="_blank">{{ item[1] }}</a>{% endfor %}</li>
+{% endfor %}
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>코드 저장소</h2>
+{% capture repos %}{% for repository in site.github.public_repositories %}* [{{ repository.name }}]({{ repository.html_url }})
+{% endfor %}{% endcapture %}{{ repos | markdownify }}
+
+<p>&nbsp;</p>
+
+<p>말투가 역한거 같거나, 맘에 안들면 니가 바꾸는거 환영, 막 살아서 미안...</p>
