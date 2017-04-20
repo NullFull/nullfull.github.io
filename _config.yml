@@ -1,0 +1,23 @@
+# Site settings
+title: 널채움
+description: >
+  하는일 없이 꾸준히 감자 먹으러 모이는 ㅆㅂㅎㅋ 점조직 모임
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-hacker
+permalink: pretty
+
+gems:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
