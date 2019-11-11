@@ -7,17 +7,6 @@
 
 <p>&nbsp;</p>
 
-<h2>로그다... (그런데 요즘은 업데이트 안함. 활동 보려면 슬랙 ) </h2>
-<ul>
-{% for page in site.pages %}
-	{% if page.url contains 'log' %}
-	<li>{{ page.dir }} - <a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-	{% endif %}
-{% endfor %}
-</ul>
-
-<p>&nbsp;</p>
-
 <h2>같이 놀려면...</h2>
 <ul>
 {% for link in site.data.links %}
