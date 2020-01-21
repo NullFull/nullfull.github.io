@@ -1,5 +1,6 @@
 
-README 적으시고~
+웹사이트는 https://github.com/NullFull/nullfull.kr 여기로 이전했습니다.
+
 
 ## 수정하려면...
 
